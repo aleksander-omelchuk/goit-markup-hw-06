@@ -333,6 +333,7 @@ color: rgba(117, 117, 117, 0.5);
 }
 .modal-checkbox {
 	display: flex;
+	margin-bottom: 30px;
 }
 .modal-checkbox-a {
 	color: var(--accent-color);
