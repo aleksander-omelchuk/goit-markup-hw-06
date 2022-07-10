@@ -241,10 +241,14 @@ ul {
 	transform: translate(-50%, -50%);
 	min-width: 528px;
 	min-height: 581px;
-  padding: 40px;
+	padding: 40px;
 	background-color: var(--main-background-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
+}
+.form-modal {
+	display: flex;
+	flex-direction: column;
 }
 .modal-close-btn {
 	position: absolute;
@@ -262,18 +266,95 @@ ul {
 	cursor: pointer;
 }
 .modal-chapter {
-font-size: 20px;
-line-height: 1.15;
-letter-spacing: 0.03em;
-margin: 40px 40px 12px;
-color:var(--titel-color);
+	font-size: 20px;
+	line-height: 1.15;
+	letter-spacing: 0.03em;
+	margin-bottom: 12px;
+	color: var(--titel-color);
+}
+.inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.rectangle {
+	width: 100%;
+	height: 40px;
+	padding: 0 42px;
+}
+.label-person {
+position: relative;	
+font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+}
+.icon-person {
+	position: absolute;
+	bottom: 11px;
+	left: 12px;
+}
+.label-phone {
+	position: relative;
+	font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+}
+.icon-phone {
+	position: absolute;
+	bottom: 11px;
+	left: 12px;
+}
+.label-email {
+	position: relative;
+	font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+}
+.icon-email {
+	position: absolute;
+	bottom: 11px;
+	left: 12px;
+}
+.user-message {
+font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+}
+.text-message {
+	width: 100%;
+	height: 120px;
+	resize: none;
+}
+.text-message::placeholder {
+	font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+.modal-checkbox {
+	display: flex;
+}
+.modal-checkbox-a {
+	color: var(--accent-color);
+}
+.modal-button {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+	width: 200px;
+height: 50px;
+	letter-spacing: 0.06em;
+	padding: 0;
+	margin: 0 auto;
+	color: var(--main-background-color);	
+	background: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border: none;
+border-radius: 4px;
+}
 
-}
-.form-modal {
-  display: flex;
-  flex-direction: column;
-  
-}
+
+
 /* section особливості */
 .visually-hidden {
 	position: absolute;
@@ -480,7 +561,7 @@ color:var(--titel-color);
 .footer .container {
 	display: flex;
 	align-items: baseline;
-  justify-content: space-between;
+	justify-content: space-between;
 }
 .logo-footer {
 	font-family: var(--accent-font);
@@ -595,7 +676,7 @@ color:var(--titel-color);
 	position: absolute;
 	top: 13px;
 	right: 28px;
-	fill:var(--main-background-color) 
+	fill: var(--main-background-color);
 }
 
 /* page-2 */
