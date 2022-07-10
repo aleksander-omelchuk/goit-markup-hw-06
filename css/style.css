@@ -555,17 +555,20 @@ color:var(--titel-color);
 	width: 358px;
 	height: 50px;
 	margin-right: 12px;
-	padding: 15px 0 15px 16px;
+	padding: 15px 16px 15px 16px;
+	outline: transparent;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
 	background-color: inherit;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus-within,
-.form-input:not(:placeholder-shown) {
-	border-color: #2196f3;
-  }
-  
+.form-input:focus-within {
+	border-color: var(--accent-color);
+	color: var(--main-background-color);
+}
 .subscription-btn {
 	position: relative;
 	font-weight: 700;
@@ -592,6 +595,7 @@ color:var(--titel-color);
 	position: absolute;
 	top: 13px;
 	right: 28px;
+	fill:var(--main-background-color) 
 }
 
 /* page-2 */
