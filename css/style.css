@@ -246,10 +246,7 @@ ul {
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 }
-.form-modal {
-	display: flex;
-	flex-direction: column;
-}
+
 .modal-close-btn {
 	position: absolute;
 	top: 8px;
@@ -281,12 +278,14 @@ ul {
 	width: 100%;
 	height: 40px;
 	padding: 0 42px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
 }
 .label-person {
-position: relative;	
-font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
+	position: relative;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
 }
 .icon-person {
 	position: absolute;
@@ -296,8 +295,8 @@ letter-spacing: 0.01em;
 .label-phone {
 	position: relative;
 	font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
 }
 .icon-phone {
 	position: absolute;
@@ -307,8 +306,8 @@ letter-spacing: 0.01em;
 .label-email {
 	position: relative;
 	font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
 }
 .icon-email {
 	position: absolute;
@@ -316,24 +315,53 @@ letter-spacing: 0.01em;
 	left: 12px;
 }
 .user-message {
-font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
 }
 .text-message {
 	width: 100%;
 	height: 120px;
 	resize: none;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
 }
 .text-message::placeholder {
 	font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
-color: rgba(117, 117, 117, 0.5);
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+	color: rgba(117, 117, 117, 0.5);
 }
 .modal-checkbox {
+	justify-content: center;
+	align-items: center;
+	position: relative;
 	display: flex;
 	margin-bottom: 30px;
+	gap: 7px;
+}
+.checkbox-icon-vector {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 15px;
+	outline:2px solid var(--titel-color);
+	outline-offset: -2px;
+	transition-property:background-color, outline-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 2px;
+	fill:var(--main-background-color)
+}
+.form-checkbox-input:checked + .checkbox-icon-vector {
+	background-color: var(--accent-color);
+	outline-color: var(--accent-color);
+
+}
+.modal-checkbox-text {
+line-height: 1.71;
+	user-select: none;
 }
 .modal-checkbox-a {
 	color: var(--accent-color);
@@ -343,18 +371,24 @@ color: rgba(117, 117, 117, 0.5);
 	font-size: 16px;
 	line-height: 1.87;
 	width: 200px;
-height: 50px;
+	height: 50px;
 	letter-spacing: 0.06em;
 	padding: 0;
 	margin: 0 auto;
-	color: var(--main-background-color);	
-	background: var(--accent-color);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border: none;
-border-radius: 4px;
+	transition-property:background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	color: var(--main-background-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border: none;
+	border-radius: 4px;
 }
-
-
+.modal-button:hover,
+.modal-button:hover {
+	cursor: pointer;
+	background-color: var(--accent-background-color);
+}
 
 /* section особливості */
 .visually-hidden {
