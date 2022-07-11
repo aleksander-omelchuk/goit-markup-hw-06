@@ -262,6 +262,9 @@ ul {
 	border-radius: 50%;
 	cursor: pointer;
 }
+.modal-close-btn:hover {
+	fill: var(--accent-color);
+}
 .modal-chapter {
 	font-size: 20px;
 	line-height: 1.15;
@@ -272,48 +275,41 @@ ul {
 .inputs {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
 }
 .rectangle {
 	width: 100%;
 	height: 40px;
+	margin-top: 4px;
 	padding: 0 42px;
+	outline: transparent;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+cursor: pointer;
 }
-.label-person {
+.rectangle:focus-within {
+	border-color: var(--accent-color);
+}
+.label {
 	position: relative;
 	font-size: 12px;
 	line-height: 1.16;
 	letter-spacing: 0.01em;
+	margin-bottom: 10px;
+	
 }
-.icon-person {
+.label:focus-within {
+	fill: var(--accent-color);
+	border-color: var(--accent-color);
+}
+.icon-input {
 	position: absolute;
 	bottom: 11px;
 	left: 12px;
 }
-.label-phone {
-	position: relative;
-	font-size: 12px;
-	line-height: 1.16;
-	letter-spacing: 0.01em;
-}
-.icon-phone {
-	position: absolute;
-	bottom: 11px;
-	left: 12px;
-}
-.label-email {
-	position: relative;
-	font-size: 12px;
-	line-height: 1.16;
-	letter-spacing: 0.01em;
-}
-.icon-email {
-	position: absolute;
-	bottom: 11px;
-	left: 12px;
-}
+
 .user-message {
 	font-size: 12px;
 	line-height: 1.16;
@@ -323,8 +319,18 @@ border-radius: 4px;
 	width: 100%;
 	height: 120px;
 	resize: none;
+	margin-top: 4px;
+	padding: 12px 16px;
+	outline: transparent;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+cursor: pointer;
+}
+.text-message:focus-within {
+	border-color: var(--accent-color);
 }
 .text-message::placeholder {
 	font-size: 12px;
@@ -337,8 +343,10 @@ border-radius: 4px;
 	align-items: center;
 	position: relative;
 	display: flex;
+	margin-top: 20px;
 	margin-bottom: 30px;
 	gap: 7px;
+	cursor: pointer;
 }
 .checkbox-icon-vector {
 	display: inline-flex;
@@ -384,7 +392,6 @@ line-height: 1.71;
 	border: none;
 	border-radius: 4px;
 }
-.modal-button:hover,
 .modal-button:hover {
 	cursor: pointer;
 	background-color: var(--accent-background-color);
